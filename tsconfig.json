@@ -1,6 +1,9 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    // The test suite imports `node:test` / `node:assert/strict`. TypeScript no
+    // longer picks up @types/* automatically, so name it explicitly.
+    "types": ["node"]
   }
 }
